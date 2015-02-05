@@ -1,0 +1,44 @@
+
+#
+# c = a + b
+#
+addi $t0, $zero, 7 # t0 = 7
+addi $t1, $zero, 3 # t1 = 3
+add $t2, $t0, $t1 # t2 = t0 + t1
+
+#
+# a = b + c
+# d = a - e
+#
+add $t0, $t1, $t2
+sub $t3, $t0, $t4  # $t3 = $t0 - $t4
+
+#
+# f = (g + h) - (i + j)
+#
+add $t5, $t6, $t7
+add $t7, $t8, $t9
+sub $t5, $t5, $t7
+
+sw $t5, -100
+
+slt $15, $16, $2
+
+li $t1, -50
+li $t2, 0
+slt $t3, $t1, $t2
+
+addi $t2, $t2, 0x10110100
+
+
+
+
+
+
+
+
+
+
+
+
+

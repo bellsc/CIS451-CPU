@@ -28,3 +28,7 @@ val2:	2007
 	la   $18, val2  
 	# store the value in the slot after val2
 	sw   $16, 4($18)
+
+	lw $20, -100
+	lw $t1, val2 + 1000($20)
+	
