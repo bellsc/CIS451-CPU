@@ -1,0 +1,35 @@
+# Testing the CPU
+
+li $13, 65
+li $15, 70
+li $9, 75
+
+
+label1:
+addi $14, $13, 5
+
+
+
+beq $14, $15, label1
+
+add $17, $14, $15
+
+beq $14, $9, end
+
+sw $17, 4($sp)
+
+
+
+end:
+ori $8, $9, 31
+
+
+halt
+
+addi $9, $9, 6
+
+
+
+
+
+
