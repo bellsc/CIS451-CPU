@@ -1,30 +1,36 @@
-# Testing the CPU
 
+
+	.data
+val1:	1983
+val2:	2007
+
+	.text
+	
 li $13, 65
 li $15, 70
 li $9, 75
 
 
+
 label1:
-addi $14, $13, 5
+addi $13, $13, 5
 
 
 
-beq $14, $15, label1
+beq $13, $15, label1
 
 add $17, $14, $15
 
-beq $14, $9, end
+#beq $14, $9, end
 
-sw $17, 4($sp)
+lw $20, val1
 
+sw $14, val1
 
 
 end:
 ori $8, $9, 31
 
-
-halt
 
 addi $9, $9, 6
 

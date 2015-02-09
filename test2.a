@@ -1,0 +1,46 @@
+	.text
+	.globl main 
+main:
+
+	li $8, 4           
+	li $s0, 9
+	li $s2, 7
+
+top:
+	li $9, 5           # Load read_int syscall into v0
+	ori $8, $9, 1024
+	#
+	# exit if reqested by the user
+	#
+	beq $s0, $s2, exit  #* branch to the exit, if desired.
+	
+
+	#
+	# Get second integer
+	#
+	li $8, 4           # Load print_string system call into $v0
+	addi, $14, $14, 65535
+	li $8, 5           # Load read_int syscall into v0
+
+	#
+	# Do it again
+	#
+	addi $s2, $s2, 2
+	j top		           #* Jump up to the top and do it again
+
+exit:	
+	#
+	# Exit
+	#
+	
+	
+	
+	add $s2, $s2, $s2
+	j bottom
+	
+	li $8, 10      
+	
+	add $s2, $s2, $s2
+	   
+bottom:
+	   
