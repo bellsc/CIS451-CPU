@@ -26,16 +26,33 @@ add $17, $14, $15
 lw $20, val1
 
 sw $14, val1
+bne $9, 75, label1
 
-
+jal func
 end:
 ori $8, $9, 31
 
-
+li $10, 87
 addi $9, $9, 6
 
+bne $9, $10, end
+
+j trueEnd
 
 
 
+#function
+func:
+	addi $11, $11, 12
+	jr $ra
 
+
+
+trueEnd:
+	li $9, 10
+labelbeq:
+	addi $9, $9, 5
+	beq $9, 15, labelbeq
+	
+	
 
