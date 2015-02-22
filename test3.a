@@ -1,0 +1,77 @@
+.data
+
+val1: -30
+val2: 1000
+val3: 0
+
+.text
+
+main:
+addi $t0, $t1, -100
+addi $t0, $t1 1000
+addi $t2, $t2, 0
+
+lw $t3, val3
+lw $t4, val2
+lw $t5, val1
+
+sw $t6, val1
+sw $t7, val2
+sw $s0, val3
+
+add $t1, $t2, $t3
+add $t2, $t1, $t3
+add $t3, $t2, $t1
+
+add $t4, $t3, 100
+add $t5, $t4, -1000
+
+li $s0, -1
+li $s1, -1
+
+li $s2, 0
+li $s3, 0
+
+li $s4, 1
+li $s5, 1
+
+beq $s0, $s1, label1
+
+addi $t0, $t1, -100
+addi $t0, $t1 1000
+addi $t2, $t2, 0
+
+label1:
+
+beq $s2, $s3, label2
+
+tar1:
+
+addi $t0, $t1, -100
+addi $t0, $t1 1000
+addi $t2, $t2, 0
+
+j tar2
+
+label2:
+
+beq $s4, $s5, label3
+
+addi $t0, $t1, -100
+addi $t0, $t1 1000
+addi $t2, $t2, 0
+
+label3:
+
+j tar1
+
+addi $t0, $t1, -100
+addi $t0, $t1 1000
+addi $t2, $t2, 0
+
+tar2:
+
+ori $t1, $t2, 100
+ori $t2, $t3, 0
+
+

@@ -1,0 +1,58 @@
+# a -> $s0
+# b-> $s1
+# x-> $s2
+
+# x = 4
+# if (a == b) {
+#    x = x + a
+# }
+# x = x + b
+
+addi $s2, $zero, 4
+bne $s0, $s1, end
+add $s2, $s2, $s0 # a = x + a
+end:
+add $s2, $s2, $s1  # x = x + b
+move $v0, $s2 
+
+# x = 4
+# if (a < b) {
+#    x = x + a
+# }
+# x = x + b
+
+addi $s2, $zero, 4
+slt $s3, $s0, $s1
+bne $s3, 0, end2
+add $s2, $s2, $s0
+end2:
+add $s2, $s2, $s1
+move $v0, $s3
+
+# x = 4
+# if (a <= b) {
+#    x = x + a
+# }
+# x = x + b
+
+addi $s2, $zero, 4
+slt $s3, $s1, $s0
+beq $s3,$zero, end3
+add $s2, $s2, $s0
+end3:
+add $s2, $s2, $s1
+move $v0, $s3
+
+# x = 4
+# if (a >= b) {
+#    x = x + a
+# } else {
+# x = x + b
+#}
+
+
+
+
+
+
+

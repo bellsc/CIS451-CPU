@@ -33,7 +33,9 @@ exit:
 	# Exit
 	#
 	
+	li $s3, -60
 	
+	add $s3, $s3, $s2
 	
 	add $s2, $s2, $s2
 	j bottom

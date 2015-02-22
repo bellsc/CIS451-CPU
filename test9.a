@@ -1,0 +1,10 @@
+.data
+mydata: .word 15 17 89 98 34 32
+
+.text 
+
+sgt $t0, $t1, $t2
+la $t0, mydata
+lw $t1, 8($t0)
+
+
