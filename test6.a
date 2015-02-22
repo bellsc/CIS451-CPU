@@ -17,3 +17,30 @@
 addi $16, $16, 3     # $16 = 3
 addi $17, $16, 5     # $17 = 8
 add  $18, $16, $17   # $18 = 16
+
+andi $t1, $t2, 100
+andi $t1, $t2, 65535
+andi $t1, $t2, -100
+andi $t1, $t2, -65536
+andi $t1, $t2, 0
+
+
+ori $t1, $t2, 100
+ori $t1, $t2, 65535
+ori $t1, $t2, -100
+ori $t1, $t2, -65536
+ori $t1, $t2, 0
+
+
+slti $t1, $t2, 100
+slti $t1, $t2, 32767
+slti $t1, $t2, -100
+slti $t1, $t2, -32768
+slti $t1, $t2, 0
+
+
+xori $t1, $t2, 100
+xori $t1, $t2, 65535
+xori $t1, $t2, -100
+xori $t1, $t2, -65536
+xori $t1, $t2, 0
