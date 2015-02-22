@@ -140,20 +140,6 @@ BEGIN jal
 	Jr 0
 	RegWrite 1
 
-BEGIN SignExtend
-  INPUTS
-  	OpCode [0x8, 0x9, 0xa, 0xb]
-	functionCode allfCodes
-  OUTPUTS
-	Jal 0
-	Branch 0
-	Bne 0
-	Halt 0
-	Jump 0
-	Jr 0
-	RegWrite 1
-	SignExtend 1
-
 BEGIN NoSignExtend
   INPUTS
   	OpCode [0xc, 0xd, 0xe]
